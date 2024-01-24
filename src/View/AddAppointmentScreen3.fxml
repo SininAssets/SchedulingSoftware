@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="560.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/20.0.1"
+            fx:controller="Controller.AddAppointmentScreen3Controller">
+    <children>
+        <Label layoutX="27.0" layoutY="33.0" text="Add an Appointment">
+            <font>
+                <Font name="System Bold Italic" size="20.0"/>
+            </font>
+        </Label>
+        <VBox layoutX="27.0" layoutY="76.0" prefHeight="420.0" prefWidth="378.0">
+            <children>
+                <HBox prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="ID">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Add_ID" editable="false" prefHeight="25.0" prefWidth="175.0"
+                                   promptText="Auto-Gen Disabled">
+                            <HBox.margin>
+                                <Insets left="75.0" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Title">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Add_Title" prefHeight="25.0" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="60.0" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="Clear_Title_Btn" mnemonicParsing="false" onAction="#Clear_Title_Btn_Click"
+                                text="Clear"/>
+                    </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Type">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Add_Type" prefHeight="25.0" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="57.5" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="Clear_Type_Btn" mnemonicParsing="false" onAction="#Clear_Type_Btn_Click"
+                                text="Clear"/>
+                    </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Description">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Add_Description" prefHeight="25.0" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="15.0" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="Clear_Description_Btn" mnemonicParsing="false"
+                                onAction="#Clear_Description_Btn_Click" text="Clear"/>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="115.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Location">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Add_Location" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="35.0" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="Clear_Location_Btn" mnemonicParsing="false" onAction="#Clear_Location_Btn_Click"
+                                text="Clear"/>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="150.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Start Date">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="Start_Date_Calendar" minWidth="-Infinity" prefHeight="25.0"
+                                    prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </DatePicker>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="185.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Start Time">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="Start_Time_Drop" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="220.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="End Date">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="End_Date_Calendar" prefHeight="25.0" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </DatePicker>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="220.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="End Time">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="End_Time_Drop" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="30.0"/>
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="255.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Customer ">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="Customer_Drop" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="25.0"/>
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="360.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="User">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="User_Drop" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="62.5"/>
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="325.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Contact">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="Contact_Drop" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="40.0"/>
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Button fx:id="Save_Btn" layoutX="275.0" layoutY="512.0" mnemonicParsing="false" onAction="#Save_Btn_Clicked"
+                text="Save"/>
+        <Button fx:id="Cancel_Btn" layoutX="335.0" layoutY="512.0" mnemonicParsing="false" onAction="#Cancel_Btn_Click"
+                text="Cancel"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/20.0.1"
+            fx:controller="Controller.LoginScreen1Controller">
+    <children>
+        <Label layoutX="32.0" layoutY="45.0" prefHeight="71.0" prefWidth="352.0" text="Scheduling Tool">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <VBox layoutX="25.0" layoutY="116.0" prefHeight="200.0" prefWidth="549.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="549.0">
+                    <children>
+                        <Label fx:id="Username" text="Username">
+                            <HBox.margin>
+                                <Insets top="10.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="UserName_Text_Field" prefHeight="25.0" prefWidth="248.0">
+                            <HBox.margin>
+                                <Insets left="20.0" top="10.0"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="549.0">
+                    <children>
+                        <Button fx:id="Username_Clear_Btn" mnemonicParsing="false" onAction="#Username_Clear_Btn_Click"
+                                text="Clear"/>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="Password" text="Password">
+                            <HBox.margin>
+                                <Insets top="10.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <PasswordField fx:id="Password_Field" prefHeight="25.0" prefWidth="248.0">
+                            <HBox.margin>
+                                <Insets left="20.0" top="10.0"/>
+                            </HBox.margin>
+                        </PasswordField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="Password_Clear_Btn" mnemonicParsing="false" onAction="#Password_Clear_Btn_Click"
+                                text="Clear">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Button fx:id="Login_Btn" layoutX="439.0" layoutY="347.0" mnemonicParsing="false" onAction="#Login_Btn_Click"
+                prefHeight="25.0" prefWidth="50.0" text="Login"/>
+        <Button fx:id="Exit_Btn" layoutX="511.0" layoutY="347.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Exit_Btn_Click"
+                prefHeight="25.0" prefWidth="50.0" text="Exit"/>
+        <Label fx:id="Location" layoutX="110.0" layoutY="316.0" text="Location:">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="Time_Zone" layoutX="208.0" layoutY="316.0" text="Time/Zone">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

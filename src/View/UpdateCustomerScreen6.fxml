@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="560.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/20.0.1"
+            fx:controller="Controller.UpdateCustomerScreen6Controller">
+    <children>
+        <Label layoutX="27.0" layoutY="33.0" text="Modify Customer">
+            <font>
+                <Font name="System Bold Italic" size="20.0"/>
+            </font>
+        </Label>
+        <VBox layoutX="27.0" layoutY="76.0" prefHeight="420.0" prefWidth="378.0">
+            <children>
+                <HBox prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="ID">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField disable="true" prefHeight="25.0" prefWidth="175.0" promptText="Auto-Gen Disabled">
+                            <HBox.margin>
+                                <Insets left="92.5"/>
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Name">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Modify_Name" prefHeight="25.0" prefWidth="175.0" promptText="Enter Name">
+                            <HBox.margin>
+                                <Insets left="67.5" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="Name_Clear_Btn" mnemonicParsing="false" onAction="#Name_Clear_Btn_Click"
+                                text="Clear"/>
+                    </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Address">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Modify_Address" prefHeight="25.0" prefWidth="175.0"
+                                   promptText="Enter Address">
+                            <HBox.margin>
+                                <Insets left="55.0" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="Address_Clear_Btn" mnemonicParsing="false" onAction="#Address_Clear_Btn_Click"
+                                text="Clear"/>
+                    </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Phone Number">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Modify_Phone" prefHeight="25.0" prefWidth="175.0"
+                                   promptText="Enter Phone Number">
+                            <HBox.margin>
+                                <Insets left="10.0" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="Phone_Clear_Btn" mnemonicParsing="false" onAction="#Phone_Clear_Btn_Click"
+                                text="Clear"/>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="185.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Country">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="Modify_Country" onAction="#Country_Select" prefHeight="25.0" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="60.0"/>
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="115.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="State/Province">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <ComboBox fx:id="Modify_State" prefWidth="175.0">
+                            <HBox.margin>
+                                <Insets left="17.5"/>
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="150.0" prefHeight="35.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Postal Code">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="Modify_Postal" prefHeight="25.0" prefWidth="175.0"
+                                   promptText="Enter Postal Code">
+                            <HBox.margin>
+                                <Insets left="35.0" right="30.0"/>
+                            </HBox.margin>
+                        </TextField>
+                        <Button fx:id="Postal_Clear_Btn" mnemonicParsing="false" onAction="#Postal_Clear_Btn_Click"
+                                text="Clear"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Button fx:id="Save_Btn" layoutX="275.0" layoutY="512.0" mnemonicParsing="false" onAction="#Save_Btn_Clicked"
+                text="Save"/>
+        <Button fx:id="Cancel_Btn" layoutX="335.0" layoutY="512.0" mnemonicParsing="false" onAction="#Cancel_Btn_Click"
+                text="Cancel"/>
+    </children>
+</AnchorPane>

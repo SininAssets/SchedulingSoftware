@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="541.0"
+            prefWidth="924.0"
+            style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/20.0.1"
+            fx:controller="Controller.ReportScreen7Controller">
+    <children>
+        <Label layoutX="316.0" layoutY="16.0" text="Reports For Each Contact">
+            <font>
+                <Font name="System Bold Italic" size="25.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="Reports_Table" layoutX="25.0" layoutY="60.0" prefHeight="397.0" prefWidth="852.0">
+            <columns>
+                <TableColumn fx:id="Appointment_ID" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="Appointment_Title" prefWidth="104.0" text="Title"/>
+                <TableColumn fx:id="Appointment_Type" prefWidth="104.0" text="Type"/>
+                <TableColumn fx:id="Appointment_Description" prefWidth="71.0" text="Description"/>
+                <TableColumn fx:id="Appointment_Location" prefWidth="83.0" text="Location"/>
+                <TableColumn fx:id="Appointment_Start" prefWidth="92.0" text="Start"/>
+                <TableColumn fx:id="Appointment_End" prefWidth="72.0" text="End"/>
+                <TableColumn fx:id="Appointment_Contact" prefWidth="72.0" text="Contact"/>
+                <TableColumn fx:id="Appointment_Customer_ID" prefWidth="72.0" text="CustomerID"/>
+                <TableColumn fx:id="Appointment_User_ID" prefWidth="72.0" text="UserID"/>
+            </columns>
+        </TableView>
+        <Button fx:id="Return_Btn" layoutX="825.0" layoutY="484.0" mnemonicParsing="false" onAction="#Return_Btn_Click"
+                text="Return"/>
+        <Label layoutX="41.0" layoutY="475.0" prefHeight="30.0" prefWidth="71.0" text="Sort By: "/>
+        <Button fx:id="Country_Btn" layoutX="99.0" layoutY="478.0" mnemonicParsing="false" onAction="#Country_Btn_Click"
+                text="Customer Total By Country"/>
+        <Button fx:id="Month_Btn" layoutX="287.0" layoutY="478.0" mnemonicParsing="false" onAction="#Month_Btn_Click"
+                text="Type And Months"/>
+        <Label layoutX="25.0" layoutY="18.0" prefHeight="30.0" prefWidth="126.0" text="Select A Contact">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <ComboBox fx:id="Contact_Drop" layoutX="151.0" layoutY="21.0" onAction="#Populate_Table_By_Contact"
+                  prefWidth="150.0"/>
+        <TextField fx:id="Reports_Search_Field" layoutX="651.0" layoutY="21.0" prefHeight="25.0" prefWidth="174.0"/>
+        <Button fx:id="Reports_Search_Btn" layoutX="837.0" layoutY="21.0" mnemonicParsing="false"
+                onAction="#Reports_Search_Btn_Click" text="Search"/>
+    </children>
+</AnchorPane>
